@@ -51,17 +51,18 @@ function PokemonList(){
 
     return(
         <div className="pokemon-list-wrapper">
-            {/* <div>
-                X: {x} <button onClick={() => setX(x+1)}>Inc</button>
-            </div>
-             <div>
-                Y: {y} <button onClick={() => setY(y+1)}>Inc</button>
-            </div> */}
-            <div>Pokemon List</div>
-
-            {(isLoading) ? 'Loading......' : 
+        
+           
+            <div className="pokemon-wrapper">
+                 {(isLoading) ? 'Loading......' : 
                  pokemonList.map((p) => <Pokemon name={p.name}  image={p.image} key={p.id}/>)}
 
+            </div>
+            <div className="controls">
+                <button>Prev</button>
+                <button>Next</button>
+            </div>
+           
         </div>
      )
 }
